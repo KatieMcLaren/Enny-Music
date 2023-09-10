@@ -12,7 +12,7 @@
 <body>
     <a id="skip" href="#main-contents">Skip to Main Contents</a>
     <header>
-        <h1>enny.</h1>
+        <h1>Enny</h1>
         <nav>
             <ul>
                 <li><a href="#artist">Artist</a></li>
@@ -24,12 +24,13 @@
 
     <main>
         <article>
-            <p>Short paragraph or quote from/about Enny</p>
+            <p>Visionary Artist to watch for</p>
         </article>
 
         <section id="artist">
             <h2>The Artist</h2>
-            <p>Information about the artist</p>
+            <p>Artist <span>Enny</span> is an up and coming rapper who is quickly climbing the charts with hits like <span>"Peng Black Girls"</span>. Enitan Adepitan, who goes by the performance name, <span>Enny</span> gained her professional start by uploading EPs to Youtube. She quickly gained a following and is collaborating with well-known artists such as Jorja Smith.</p>
+            <p>With an increase in her success, her singles have garnered an increase in downloads across platforms such as Spotify. Enny currently has two albums, <q>Under Twenty Five</q> and <q>We Go Again</q>. Both of which have gained millions of plays on Spotify.</p>
             <p>Then add a photo collage of Enny 5 images</p>
         </section>
 
@@ -46,9 +47,37 @@
 
         <section id="contactus">
             <h2>Contact</h2>
-            <p>Small blurb abdout why to contact us and then the contact form below</p>
+            <p>Sign up for our monthly Newsletter to stay up to date on tour and appearnce dates.</p>
+            <form>
+                <div id="names">
+                    <label for="fname">First Name<span class="required">*</span></label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" autocomplete="given-name" required>
+                    <label for="lname">Last Name<span class=required>*</span></label>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" autocomplete="family-name" required>
+                </div>
+                <div>
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="text" name="email" id="email" placeholder="Email Address" autocomplete="email" required>
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone" autocomplete="tel" placeholder="1-234-5678">
+                </div>
+                <fieldset>
+                    <legend>Preferred Method of Contact</legend>
+                    <label for="prefPhone">
+                        <input type="radio" name="contactPref" id="prefPhone" required checked>
+                        <span>Phone</span>
+                    </label>
+                    <label for="prefText">
+                        <input type="radio" name="contactPref" id="prefText" required checked>
+                        <span>Text</span>
+                    </label>
+                    <label for="prefEmail">
+                        <input type="radio" name="contactPref" id="prefEmail" required checked>
+                        <span>Email</span>
+                    </label>
+                </fieldset>
+            </form>
         </section>
-
     </main>
 
     <footer>
