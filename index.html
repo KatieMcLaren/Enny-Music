@@ -29,18 +29,17 @@
     </header>
 
     <main>
-        <section id="artist">
+        <section class="artistSection" id="artist">
             <h2>The Artist</h2>
-            <p>Artist <span>Enny</span> is an up and coming rapper who is quickly climbing the charts with hits like <span>"Peng Black Girls"</span>. Enitan Adepitan, who goes by the performance name, <span>Enny</span> gained her professional start by uploading EPs to Youtube. She quickly gained a following and is collaborating with well-known artists such as Jorja Smith.</p>
-            <p>With an increase in her success, her singles have garnered an increase in downloads across platforms such as Spotify. Enny currently has two albums, <q>Under Twenty Five</q> and <q>We Go Again</q>. Both of which have gained millions of plays on Spotify.</p>
-            <div id="imageWrapper">
+            <p>Artist <span>Enny</span> is an up and coming rapper who is quickly climbing the charts with hits like <span>"Peng Black Girls"</span>. Enitan Adepitan, who goes by the performance name, <span>Enny</span> gained her professional start by uploading EPs to Youtube. She quickly gained a following and is collaborating with well-known artists such as Jorja Smith.<br> With an increase in her success, her singles have garnered an increase in downloads across platforms such as Spotify. Enny currently has two albums, <q>Under Twenty Five</q> and <q>We Go Again</q>. Both of which have gained millions of plays on Spotify.</p>
+            <div class="imgWrapper">
                 <img src="Images/enny07.jpeg" alt="Album cover named Charge It by artist Enny.">
                 <img src="Images/enny04.jpg">
                 <img src="Images/enny01.jpg">
             </div>
         </section>
 
-        <section id="music">
+        <section class="musicSection" id="music">
             <h2>Music</h2>
             <h3>Spotify Top Ranked Songs</h3>
             <section>
@@ -74,22 +73,21 @@
             <p>Place the JS game here</p>
         </section>
 
-        <section id="contactus">
+        <section class="contactSection" id="contactus">
             <h2>Contact</h2>
-            <p>Sign up for our monthly Newsletter to stay up to date on tour and appearnce dates.</p>
             <form>
-                <div id="names">
+                <p>Sign up for our monthly Newsletter to stay up to date on tour and appearance dates.</p>
                     <label for="fname">First Name<span class="required">*</span></label>
                     <input type="text" id="fname" name="fname" placeholder="First Name" autocomplete="given-name" required>
                     <label for="lname">Last Name<span class=required>*</span></label>
                     <input type="text" id="lname" name="lname" placeholder="Last Name" autocomplete="family-name" required>
-                </div>
-                <div>
+                
+        
                     <label for="email">Email<span class="required">*</span></label>
                     <input type="text" name="email" id="email" placeholder="Email Address" autocomplete="email" required>
                     <label for="phone">Phone Number</label>
                     <input type="text" name="phone" id="phone" autocomplete="tel" placeholder="1-234-5678">
-                </div>
+                
                 <fieldset>
                     <legend>Preferred Method of Contact</legend>
                     <label for="prefPhone">
@@ -111,11 +109,12 @@
 
     <footer>
         <small>Copyright &copy; 2023 ENNY Music</small>
-        <p>Add information including social icons into this footer area</p>
-        <a href="#">Join</a>
-        <a href="#">Privacy Statement</a>
-        <a href="#">Terms and Agreements</a>
         <p class="eduText">For Educational Purposes Only</p>
+        <ul>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Privacy Statement</a></li>
+            <li><a href="#">Terms and Agreements</a></li>
+        </ul>
     </footer>
 </body>
 </html>

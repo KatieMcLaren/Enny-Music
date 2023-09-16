@@ -47,17 +47,16 @@ table {
 }
 *{
     box-sizing: border-box;
-    border: 4px solid red; 
 }
 html{
-    background-color: var(--white);
+    background-color: var(--black);
 }
 body{
     position: relative;
     margin: 0 auto;
     width:1280px;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
 }
 #skip{
     position: absolute;
@@ -76,14 +75,14 @@ header{
     position: relative;
     width:100%;
     padding:10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 nav{
     display: block;
     position:absolute;
     width: 400px;
     top: 35px;
-    right: 100px;
+    right: 0px;
 }
 nav ul{
     display: flex;
@@ -96,7 +95,7 @@ nav li{
 }
 nav a{
     text-decoration: none;
-    color: var(--white);
+    color: var(--black);
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
@@ -104,11 +103,11 @@ nav a{
     display: flex;
     flex-flow: row wrap;
     width:100%;
-    justify-content: center;
+    justify-content: left;
     align-content: center;
 }
 #headerWrap p{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     align-self: center;
     padding-left: 10px;
@@ -128,4 +127,130 @@ h2{
 h3{
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p, a, label, legend, input{
+    font-size: 1rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/**********Artist Section********/
+.artistSection{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    padding:30px;
+}
+.artistSection h2{
+    grid-column: 1/-1;
+    height: 100px;
+}
+.artistSection p{
+    position:relative;
+    width: 400px;
+    padding-top: 10px;
+    left: 25px;
+    line-height: 2rem;
+}
+.imgWrapper{
+    display: flex;
+    flex-flow: row wrap;
+    gap:10px;
+}
+div.imgWrapper img{
+    width: 250px;
+    height: 250px;
+}
+
+/**********Music Section********/
+#music{
+    position: relative;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(150px,150px,300px);
+    padding: 30px;
+}
+.musicSection h2{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    padding-bottom: 15px;
+}
+.musicSection h3{
+    position: relative;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    padding-bottom: 25px;
+    left:25px;
+}
+#music section>img{
+    grid-row: 3/4;
+    width:200px;
+    height:200px;
+    padding-right: 10px;
+    border-radius: 15%;
+    justify-self: center;
+}
+
+/**********Game Section********/
+
+
+
+
+
+
+
+/**********ContactForm Section********/
+.contactSection{
+    display: block;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.contactSection h2{
+    padding-bottom: 30px;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    position: relative;
+    width:900px;
+    background-color: red;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    padding: 25px;
+    left:160px;
+}
+form p{
+    grid-column: 1/-1;
+    align-self: center;
+}
+form label{
+    padding:10px;
+}
+form input{
+    width:200px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+
+
+
+
+/**********footer Section********/
+footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: var(--neon-green);
+    align-items: end;
+    padding:10px 20px;
+    color: var(--black);
+    line-height: 1.5rem;
+}
+footer p{
+    justify-self: center;
+}
+footer a{
+    text-decoration: none;
+    color: var(--black);
 }
