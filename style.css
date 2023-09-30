@@ -58,6 +58,18 @@ body{
     color: var(--black);
     line-height: 1.2;
 }
+.darkMode{
+    background: linear-gradient(#3f37c2, var(--deep-purple));
+    color: white;
+}
+.hidden{
+    display: none;
+}
+.error{
+    color: red;
+    display:block;
+    font-size: 1rem;
+}
 .switch {
     position: relative;
     display: inline-block;
@@ -76,7 +88,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--white);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -87,7 +99,7 @@ body{
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--deep-purple);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -98,7 +110,7 @@ body{
     border-radius: 50%;
 }
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: darkgrey;
 }
 input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
@@ -240,8 +252,7 @@ input::placeholder, textarea::placeholder{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(150px,150px,300px);
-    padding: 30px;
-    margin-bottom: 20px;
+    padding: 40px 30px;
 }
 .musicSection h2{
     grid-column: 1/-1;
@@ -276,18 +287,15 @@ input::placeholder, textarea::placeholder{
     padding:5px 10px;
 }
 li span{
-    background-color: antiquewhite;
     font-style: italic;
 }
 /**********Game Section********/
 #gameWrapper{
     display: block;
     position: relative;
-    padding: 20px 10px;
+    padding: 30px 10px;
     background: linear-gradient(#b100e8, #e9ecef);
     height:400px;
-    margin-top: 20px;
-    padding-bottom: 20px;
     text-align: center;
 }
 article p, article h2, article input, article label {
@@ -325,21 +333,19 @@ article input[type=submit]:hover{
     text-align: center;
 }
 /**********ContactForm Section********/
-.contactSection{
+#contactus{
     display: block;
-    padding-left: 20px;
-    margin-top: 30px;
-    background-color: #ffffff;
+    padding: 40px 20px;
 }
-.contactSection h2{
+#contactus h2{
     padding-bottom: 30px;
 }
 form{
     display: block;
     position: relative;
     left: 50px;
-    width:80%;
-    background: linear-gradient(white, #9198e5);
+    width:70%;
+    background: linear-gradient(#9198f9, #9198e5);
     border-radius: 7px;
     padding: 25px;
     left:160px;
@@ -347,9 +353,13 @@ form{
     margin-bottom: 20px;
     margin-top: 20px;
 }
+#formInputValid{
+    display: inline-block;
+    color:#000000;
+    font-size: 1rem;
+    padding: 20px;
+}
 #contactWrapper{
-    display: flex;
-    flex-flow: row wrap;
     padding-bottom: 10px;
 }
 form p{
@@ -360,7 +370,7 @@ form p{
 }
 form label, fieldset label{
     padding:10px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 15px;
 }
 form input[type=text],textarea{
@@ -370,7 +380,7 @@ form input[type=text],textarea{
     border: 1px solid var(--dark-gray);
     border-radius: 3px;
     margin-top: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 form input[type=submit]{
     width: 200px;
@@ -412,5 +422,4 @@ footer p{
 }
 footer a{
     text-decoration: none;
-    color: var(--black);
 }
