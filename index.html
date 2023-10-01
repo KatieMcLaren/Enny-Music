@@ -54,32 +54,42 @@
         <section class="musicSection" id="music">
             <h2>Music</h2>
             <h3>Singles available for purchase</h3>
+            <a href="#music" id="prodLinkOne">Peng Black Girls</a>
+            <a href="#music" id="prodLinkTwo">For South</a>
+            <a href="#music" id="prodLinkThree">Charge It</a>
+
             <section>
-                <img src="Images/peng-black-girls.jpg" alt="Dark black and white record cover for song Peng Black Girls by Enny">
-                <h4>Peng Black Girls</h4>
-                <ul>
-                    <li><span>Digital Purchase: $2.00</span></li>
-                    <li>Album: Under 25</li>
-                    <li>Listeners: 6+ Million</li>
-                </ul>
+                <div id="productOne">
+                    <h4>Peng Black Girls</h4>
+                    <img src="Images/peng-black-girls.jpg" alt="Dark black and white record cover for song Peng Black Girls by Enny">
+                    <ul>
+                        <li><span>Digital Purchase: $2.00</span></li>
+                        <li>Album: Under 25</li>
+                        <li>Listeners: 6+ Million</li>
+                    </ul>
+                </div>
             </section>
             <section>
-                <img src="Images/disco-vibe.png" alt="Retro couple in 70s inspired outfits displaying a mirror disco ball.">
-                <h4>For South</h4>
-                <ul>
-                    <li><span>Digital Purchase: $2.00</span></li>
-                    <li>Album: The Silhouttes Project</li>
-                    <li>Listeners: 6+ Million</li>
-                </ul>
+                <div id="productTwo" class="hidden">
+                    <h4>For South</h4>
+                    <img src="Images/disco-vibe.png" alt="Retro couple in 70s inspired outfits displaying a mirror disco ball.">
+                    <ul>
+                        <li><span>Digital Purchase: $2.00</span></li>
+                        <li>Album: The Silhouttes Project</li>
+                        <li>Listeners: 6+ Million</li>
+                    </ul>
+                </div>
             </section>
             <section>
-                <img src="Images/charge-it.jpg" alt="Artist Enny spray painting red wording on a hanging wood board">
-                <h4>Charge It</h4>
-                <ul>
-                    <li><span>Digital Purchase: $2.00</span></li>
-                    <li>Album: We Go Again</li>
-                    <li>Listeners: 6+ Million</li>
-                </ul>
+                <div id="productThree" class="hidden">
+                    <h4>Charge It</h4>
+                    <img src="Images/charge-it.jpg" alt="Artist Enny spray painting red wording on a hanging wood board">
+                    <ul>
+                        <li><span>Digital Purchase: $2.00</span></li>
+                        <li>Album: We Go Again</li>
+                        <li>Listeners: 6+ Million</li>
+                    </ul>
+                </div>
             </section>
         </section>
 
@@ -92,7 +102,8 @@
                 <p>Play for a chance to win a pair of tickets for you and a guest to see Enny live in concert.</p>
                 <label for="gameGuess">Enter a number between 1 and 10</label>
                 <input type="text" name="gameGuess" id="gameGuess">
-                <input type="submit" value="Let's Play!">
+                <input type="submit" value="Let's Play!" id="gameSubmit"><br>
+                <span id="gameSpan"></span>
             </div>
         </article>
 
@@ -148,11 +159,6 @@
     <footer>
         <small>Copyright &copy; 2023 ENNY Music</small>
         <p class="eduText">For Educational Purposes Only</p>
-        <ul>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Privacy Statement</a></li>
-            <li><a href="#">Terms and Agreements</a></li>
-        </ul>
     </footer>
 </body>
 </html>

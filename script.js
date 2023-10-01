@@ -1,5 +1,5 @@
 "use strict";
-
+//FORM VARIABLE AND FUNCTIONS
 let fNameInput = document.getElementById("fname");
 let lNameInput = document.getElementById("lname");
 let emailInput = document.getElementById("emailInput");
@@ -16,8 +16,6 @@ let emailSpan = document.getElementById("emailError");
 let phoneSpan = document.getElementById("phoneError");
 let checkedSpan = document.getElementById("checkedError");
 let commentSpan = document.getElementById("commentError");
-
-
 
 function validateForm(e){
     e.preventDefault();
@@ -95,7 +93,7 @@ function validateForm(e){
         commentInput.value = "";
     }
 }
-
+//DARK MODE FUNCTION
 function changeMode(){
     let pageFoot = document.querySelector("footer");
     let musicSection = document.getElementById("music");
@@ -104,12 +102,69 @@ function changeMode(){
     musicSection.classList.toggle("darkMode");
     contactSection.classList.toggle("darkMode");
 }
+//GUESSING GAME FUNCTIONS
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1));
+}
+function numberGame(e){
+    e.preventDefault();
 
+    let messageSpan = document.getElementById("gameSpan");
+    let userInput = document.getElementById("gameGuess");
+    let randomNum = getRandomNumber(1,10);
+    let gameRegex = /^(?:[1-9]|0[1-9]|10)$/;
+    
+    if(userInput.value === ""){
+        messageSpan.innerHTML = "Please enter valid number";
+    }else if(!(gameRegex.test(userInput.value))){
+        messageSpan.innerHTML = "Please enter valid number";
+    }else if(userInput.value == randomNum){
+        messageSpan.innerHTML = "You're our lucky winner!";
+    }else{
+        messageSpan.innerHTML = "Sorry, try again next time.";
+    }
+    userInput.value = "";
+}
+function newGuess(){
+    let messageSpan = document.getElementById("gameSpan");
+    messageSpan.innerHTML = "";
+}
+//PRODUCT CARDS FUNCTIONS
+function prodOneFocus(){
+    let prodOneCard = document.getElementById("productOne");
+    let prodTwoCard = document.getElementById("productTwo");
+    let prodThreeCard = document.getElementById("productThree");
+    
+    prodOneCard.classList.remove("hidden");
+    prodTwoCard.classList.add("hidden");
+    prodThreeCard.classList.add("hidden");
+}
+function prodTwoFocus(){
+    let prodOneCard = document.getElementById("productOne");
+    let prodTwoCard = document.getElementById("productTwo");
+    let prodThreeCard = document.getElementById("productThree");
 
+    prodTwoCard.classList.remove("hidden");
+    prodOneCard.classList.add("hidden");
+    prodThreeCard.classList.add("hidden");
+}
+function prodThreeFocus(){
+    let prodOneCard = document.getElementById("productOne");
+    let prodTwoCard = document.getElementById("productTwo");
+    let prodThreeCard = document.getElementById("productThree");
 
-
+    prodThreeCard.classList.remove("hidden");
+    prodTwoCard.classList.add("hidden");
+    prodOneCard.classList.add("hidden");
+}
 
 //Event-Listeners Area---------------------------------------------------------
 
 document.getElementById("submitForm").addEventListener("click", validateForm);
 document.getElementById("darkInput").addEventListener("click", changeMode);
+document.getElementById("gameSubmit").addEventListener("click", numberGame);
+document.getElementById("gameGuess").addEventListener("focus", newGuess);
+
+document.getElementById("prodLinkOne").addEventListener("click",prodOneFocus);
+document.getElementById("prodLinkTwo").addEventListener("click",prodTwoFocus);
+document.getElementById("prodLinkThree").addEventListener("click",prodThreeFocus);
