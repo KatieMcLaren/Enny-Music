@@ -59,7 +59,7 @@ body{
     line-height: 1.2;
 }
 .darkMode{
-    background: linear-gradient(#3f37c2, var(--deep-purple));
+    background: linear-gradient(#3f37c2, #ac46a1);
     color: white;
 }
 .hidden{
@@ -277,10 +277,10 @@ input::placeholder, textarea::placeholder{
     box-shadow: -5px 5px 5px #aaa;
     border: 7px solid var(--black);
 }
-.musicSection li{
+.musicSection dt, .musicSection dl{
     padding:5px 10px;
 }
-li span{
+dt span{
     font-style: italic;
 }
 #music a{
@@ -425,16 +425,25 @@ input[type=radio]{
 }
 /**********footer Section********/
 footer{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-items: end;
+    display: inline-flex;
+    width: 100%;
     padding:30px 20px;
     color: var(--black);
     line-height: 1.5rem;
+    justify-content: center;
+}
+small{
+    padding-right: 30px;
 }
 footer p{
     justify-self: center;
+    padding-right:30px;
 }
-footer a{
-    text-decoration: none;
+footer ul li{
+    display: inline-block;
+}
+footer img{
+    width:50px;
+    height: 50px;
+    padding: 5px;
 }
